@@ -59,7 +59,7 @@ CRecognizeBarcode::~CRecognizeBarcode()
 //		// If barcode recognized (in stretched image)
 //		else 
 //		{
-//			pRes->m_wMessageType = EVENTLOG_INFORMATION_TYPE;
+//			pRes->m_wMessageType = EVENTLOG_INFORMATION_TYPE
 //			pRes->m_sMessage = barcodes[0];
 //			pRes->m_iLotExpIndex = m_lBarcodeTop;
 //			for (size_t i = 0; i < min(int(barcodes.size()), int(pRes->m_arrayBarcodes.GetCount())); i++) 

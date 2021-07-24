@@ -14,6 +14,7 @@
 
 #include "resource.h"       // main symbols
 
+
 /////////////////////////////////////////////////////////////////////////////
 // CDemoAppApp:
 // See DemoApp.cpp for the implementation of this class

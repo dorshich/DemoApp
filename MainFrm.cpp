@@ -328,10 +328,10 @@ void CMainFrame::OnFileSaveimage()
 		const dstringa filenamefile = "C:/Users/dor.s/Desktop/newhiiii.jpg";
 		saveToFileJPEG(*m_pLastSnappedBuffer, filenamefile);
 	}
-	CRecognizeBarcode fff;
+	/*CRecognizeBarcode fff;
 	std::vector<CString>barcode;
 	CString sFile(L"C:\\Users\\dor.s\\Desktop\\Cyc 5_3.jpg");
-	fff.DynamSoft_PerformBarcodeRecognition(sFile, barcode, TRUE);	
+	fff.DynamSoft_PerformBarcodeRecognition(sFile, barcode, TRUE);	*/
 }
 
 //////////////////////////////////////////////////////////////////////////
