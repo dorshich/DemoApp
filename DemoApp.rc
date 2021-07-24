@@ -1,0 +1,414 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 7, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\DemoApp.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.deu\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\app.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_PREVIEW_START
+    BUTTON      ID_PREVIEW_STOP
+    SEPARATOR
+    BUTTON      ID_FILE_WRITEAVI
+    BUTTON      ID_FILE_SAVEIMAGE
+    SEPARATOR
+    BUTTON      ID_SETTINGS_DEVICE
+    BUTTON      ID_SETTINGS_IMAGE
+    SEPARATOR
+    BUTTON      ID_BUTTONTRIGGERTOGGLE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Info about DemoApp"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "DemoApp Version 1.4",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2002",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_AVICAPTURE DIALOGEX 0, 0, 300, 126
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Capture Video"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_CONTAINER_COMBO,80,7,140,90,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Video Codec",IDC_RADIO_CODEC,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_GROUP,7,29,67,10,
+                    WS_EX_RIGHT
+    CONTROL         "Uncompressed",IDC_RADIO_UNCOMPRESSED,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT,7,45,67,10,WS_EX_RIGHT
+    CONTROL         "Unspecified",IDC_RADIO_UNSPECIFIED,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT,7,61,67,10,WS_EX_RIGHT
+    COMBOBOX        IDC_CODEC_COMBO,80,27,140,85,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_UNCOMPRESSED_COMBO,80,43,140,83,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_FILENAME_EDIT,80,80,117,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Start Capture",IDC_START_BUTTON,7,102,67,17
+    CONTROL         "Pause Capture",IDC_PAUSE_BUTTON,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,80,102,67,17
+    PUSHBUTTON      "Stop Capture",IDC_STOP_BUTTON,153,102,67,17,WS_DISABLED
+    PUSHBUTTON      "Codec parameter...",IDC_PARAMETER_BUTTON,226,25,67,17,
+                    WS_DISABLED
+    DEFPUSHBUTTON   "Close",IDOK,226,102,67,17
+    PUSHBUTTON      "...",IDC_FILESELECT_BUTTON,210,80,10,14
+    LTEXT           "Video File Name",IDC_STATIC,7,86,67,8,0,WS_EX_RIGHT
+    LTEXT           "File Type",IDC_STATIC,7,11,67,8,0,WS_EX_RIGHT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,5,0,1
+ PRODUCTVERSION 3,5,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040704b0"
+        BEGIN
+            VALUE "FileDescription", "MFC-Anwendung DemoApp"
+            VALUE "FileVersion", "3,5,0,1"
+            VALUE "InternalName", "DemoApp"
+            VALUE "LegalCopyright", "Copyright (C) The Imaging Source Europe GmbH"
+            VALUE "OriginalFilename", "DemoApp.EXE"
+            VALUE "ProductName", "Anwendung DemoApp"
+            VALUE "ProductVersion", "3,5,0,1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x407, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_AVICAPTURE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        VERTGUIDE, 74
+        VERTGUIDE, 80
+        VERTGUIDE, 220
+        VERTGUIDE, 226
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+        HORZGUIDE, 19
+        HORZGUIDE, 39
+        HORZGUIDE, 55
+        HORZGUIDE, 71
+        HORZGUIDE, 94
+        HORZGUIDE, 102
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "DemoApp"
+    IDD_DEVICE_DIALOG       "Device settings"
+    IDD_IMAGE_DIALOG        "Image settings"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "DemoApp"
+    AFX_IDS_IDLEMESSAGE     "Bereit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "ER"
+    ID_INDICATOR_CAPS       "UF"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "RF"
+    ID_INDICATOR_OVR        "�B"
+    ID_INDICATOR_REC        "MA"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Zeigt Programm-Informationen, Versionsnummer und Copyright an.\nInfo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Wechselt zum n�chsten Fensterausschnitt.\nN�chster Ausschnitt"
+    ID_PREV_PANE            "Springt zum vorherigen Fensterausschnitt zur�ck.\nVorheriger Ausschnitt"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Teilt das aktive Fenster in Ausschnitte.\nTeilen"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "L�scht die Markierung.\nL�schen"
+    ID_EDIT_CLEAR_ALL       "L�scht alles.\nAlles l�schen"
+    ID_EDIT_COPY            "Kopiert die Markierung und �bertr�gt sie in die Zwischenablage.\nKopieren"
+    ID_EDIT_CUT             "Entfernt die Markierung und �bertr�gt sie in die Zwischenablage.\nAusschneiden"
+    ID_EDIT_FIND            "Sucht den angegebenen Text.\nSuchen"
+    ID_EDIT_PASTE           "F�gt den Inhalt der Zwischenablage ein.\nEinf�gen"
+    ID_EDIT_REPEAT          "Wiederholt die letzte Aktion.\nWiederholen"
+    ID_EDIT_REPLACE         "Ersetzt einen bestimmten Text durch einen anderen.\nErsetzen"
+    ID_EDIT_SELECT_ALL      "Markiert das gesamte Dokument.\nAlles markieren"
+    ID_EDIT_UNDO            "Macht die letzte Aktion r�ckg�ngig.\nR�ckg�ngig"
+    ID_EDIT_REDO            "Wiederholt die vorher r�ckg�ngig gemachte Aktion.\nWiederherstellen"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Blendet die Symbolleiste ein oder aus.\nSymbolleiste ein-/ausschalten"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "�ndert die Fenstergr��e."
+    AFX_IDS_SCMOVE          "�ndert die Position des Fensters."
+    AFX_IDS_SCMINIMIZE      "Verkleinert das Fenster zu einem Symbol."
+    AFX_IDS_SCMAXIMIZE      "Vergr��ert das Fenster zu voller Gr��e."
+    AFX_IDS_SCNEXTWINDOW    "Wechselt zum n�chsten Dokumentfenster."
+    AFX_IDS_SCPREVWINDOW    "Wechselt zum vorherigen Dokumentfenster."
+    AFX_IDS_SCCLOSE         "Schlie�t das aktive Fenster und fordert zur Dokumentspeicherung auf."
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Stellt das Fenster in seiner normalen Gr��e wieder her."
+    AFX_IDS_SCTASKLIST      "Aktiviert die Task-Liste."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_SAVEIMAGE       "Save a Still Image\nSave a Still Image"
+    ID_FILE_WRITEAVI        "Record Video File\nRecord Video File"
+    ID_PREVIEW_START        "Start Live Image Preview\nStart Live Image Preview"
+    ID_PREVIEW_STOP         "Stop Live Image Preview\nStop Live Image Preview"
+    ID_SETTINGS_IMAGE       "Video Capture Device Properties\nVideo Capture Device Properties"
+    ID_SETTINGS_DEVICE      "Select Video Capture Device\nSelect Video Capture Device"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BUTTONTRIGGERTOGGLE  "Toggle Trigger Mode\nToggle Trigger Mode"
+END
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Save Image...",              ID_FILE_SAVEIMAGE
+        MENUITEM "&Record Video...",            ID_FILE_WRITEAVI, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                       ID_APP_EXIT
+    END
+    POPUP "&Device"
+    BEGIN
+        MENUITEM "&Select...",                  ID_SETTINGS_DEVICE
+        MENUITEM "&Properties...",              ID_SETTINGS_IMAGE, GRAYED
+        MENUITEM "&Trigger Mode",               ID_BUTTONTRIGGERTOGGLE
+    END
+    POPUP "&Preview"
+    BEGIN
+        MENUITEM "&Start",                      ID_PREVIEW_START
+        MENUITEM "Sto&p",                       ID_PREVIEW_STOP, GRAYED
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDM_EXTERNAL_TRIGGER    "Toggles external trigger"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE 7, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\DemoApp.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.deu\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
