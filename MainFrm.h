@@ -42,7 +42,7 @@ public:
 protected:  // control bar embedded members
     CToolBar    m_wndToolBar;
     CChildView    m_wndView;
-
+	void updateDevices();
     // Generated message map functions
 protected:
     //{{AFX_MSG(CMainFrame)
@@ -72,6 +72,8 @@ protected:
     DSNS::tFrameSnapSinkPtr                 m_pSink;
 
     DSNS::tFrameQueueBufferPtr              m_pLastSnappedBuffer;
+public:
+	afx_msg void OnFileExit2();
 };
 
 /////////////////////////////////////////////////////////////////////////////

@@ -94,6 +94,7 @@
 #define ID_SETTINGS_DEVICE              32783
 #define ID_BUTTONTRIGGERTOGGLE          32784
 #define IDM_EXTERNAL_TRIGGER            32787
+#define ID_FILE_EXIT2                   32788
 
 // Next default values for new objects
 // 
@@ -101,7 +102,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
 #define _APS_NEXT_RESOURCE_VALUE        133
-#define _APS_NEXT_COMMAND_VALUE         32788
+#define _APS_NEXT_COMMAND_VALUE         32789
 #define _APS_NEXT_CONTROL_VALUE         1067
 #define _APS_NEXT_SYMED_VALUE           101
 #endif

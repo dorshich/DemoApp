@@ -33,7 +33,7 @@ public:
 	//}}AFX_VIRTUAL
 
 // Implementation
-
+	CStringArray m_arrayCameras;
 public:
 	//{{AFX_MSG(CDemoAppApp)
 	afx_msg void OnAppAbout();

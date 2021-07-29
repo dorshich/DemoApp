@@ -16,10 +16,8 @@
 // German (Germany) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
-#ifdef _WIN32
 LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 #pragma code_page(1252)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -68,6 +66,7 @@ END
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\app.ico"
 
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // Bitmap
@@ -75,12 +74,13 @@ IDR_MAINFRAME           ICON                    "res\\app.ico"
 
 IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
 
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // Toolbar
 //
 
-IDR_MAINFRAME TOOLBAR  16, 16
+IDR_MAINFRAME TOOLBAR 16, 16
 BEGIN
     BUTTON      ID_PREVIEW_START
     BUTTON      ID_PREVIEW_STOP
@@ -100,7 +100,7 @@ END
 // Accelerator
 //
 
-IDR_MAINFRAME ACCELERATORS 
+IDR_MAINFRAME ACCELERATORS
 BEGIN
     "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
     "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
@@ -120,7 +120,7 @@ END
 // Dialog
 //
 
-IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+IDD_ABOUTBOX DIALOG 0, 0, 235, 55
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Info about DemoApp"
 FONT 8, "MS Sans Serif"
@@ -136,26 +136,17 @@ STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Capture Video"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
-    COMBOBOX        IDC_CONTAINER_COMBO,80,7,140,90,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_TABSTOP
-    CONTROL         "Video Codec",IDC_RADIO_CODEC,"Button",
-                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_GROUP,7,29,67,10,
-                    WS_EX_RIGHT
-    CONTROL         "Uncompressed",IDC_RADIO_UNCOMPRESSED,"Button",
-                    BS_AUTORADIOBUTTON | BS_LEFTTEXT,7,45,67,10,WS_EX_RIGHT
-    CONTROL         "Unspecified",IDC_RADIO_UNSPECIFIED,"Button",
-                    BS_AUTORADIOBUTTON | BS_LEFTTEXT,7,61,67,10,WS_EX_RIGHT
-    COMBOBOX        IDC_CODEC_COMBO,80,27,140,85,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
-    COMBOBOX        IDC_UNCOMPRESSED_COMBO,80,43,140,83,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CONTAINER_COMBO,80,7,140,90,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Video Codec",IDC_RADIO_CODEC,"Button",BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_GROUP,7,29,67,10,WS_EX_RIGHT
+    CONTROL         "Uncompressed",IDC_RADIO_UNCOMPRESSED,"Button",BS_AUTORADIOBUTTON | BS_LEFTTEXT,7,45,67,10,WS_EX_RIGHT
+    CONTROL         "Unspecified",IDC_RADIO_UNSPECIFIED,"Button",BS_AUTORADIOBUTTON | BS_LEFTTEXT,7,61,67,10,WS_EX_RIGHT
+    COMBOBOX        IDC_CODEC_COMBO,80,27,140,85,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_UNCOMPRESSED_COMBO,80,43,140,83,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     EDITTEXT        IDC_FILENAME_EDIT,80,80,117,14,ES_AUTOHSCROLL
     PUSHBUTTON      "Start Capture",IDC_START_BUTTON,7,102,67,17
-    CONTROL         "Pause Capture",IDC_PAUSE_BUTTON,"Button",
-                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,80,102,67,17
+    CONTROL         "Pause Capture",IDC_PAUSE_BUTTON,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,80,102,67,17
     PUSHBUTTON      "Stop Capture",IDC_STOP_BUTTON,153,102,67,17,WS_DISABLED
-    PUSHBUTTON      "Codec parameter...",IDC_PARAMETER_BUTTON,226,25,67,17,
-                    WS_DISABLED
+    PUSHBUTTON      "Codec parameter...",IDC_PARAMETER_BUTTON,226,25,67,17,WS_DISABLED
     DEFPUSHBUTTON   "Close",IDOK,226,102,67,17
     PUSHBUTTON      "...",IDC_FILESELECT_BUTTON,210,80,10,14
     LTEXT           "Video File Name",IDC_STATIC,7,86,67,8,0,WS_EX_RIGHT
@@ -207,7 +198,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
@@ -243,20 +234,20 @@ END
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDR_MAINFRAME           "DemoApp"
     IDD_DEVICE_DIALOG       "Device settings"
     IDD_IMAGE_DIALOG        "Image settings"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_APP_TITLE       "DemoApp"
     AFX_IDS_IDLEMESSAGE     "Bereit"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_INDICATOR_EXT        "ER"
     ID_INDICATOR_CAPS       "UF"
@@ -266,23 +257,23 @@ BEGIN
     ID_INDICATOR_REC        "MA"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_APP_ABOUT            "Zeigt Programm-Informationen, Versionsnummer und Copyright an.\nInfo"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_NEXT_PANE            "Wechselt zum n�chsten Fensterausschnitt.\nN�chster Ausschnitt"
     ID_PREV_PANE            "Springt zum vorherigen Fensterausschnitt zur�ck.\nVorheriger Ausschnitt"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_WINDOW_SPLIT         "Teilt das aktive Fenster in Ausschnitte.\nTeilen"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_EDIT_CLEAR           "L�scht die Markierung.\nL�schen"
     ID_EDIT_CLEAR_ALL       "L�scht alles.\nAlles l�schen"
@@ -297,12 +288,12 @@ BEGIN
     ID_EDIT_REDO            "Wiederholt die vorher r�ckg�ngig gemachte Aktion.\nWiederherstellen"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_VIEW_TOOLBAR         "Blendet die Symbolleiste ein oder aus.\nSymbolleiste ein-/ausschalten"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_SCSIZE          "�ndert die Fenstergr��e."
     AFX_IDS_SCMOVE          "�ndert die Position des Fensters."
@@ -313,13 +304,13 @@ BEGIN
     AFX_IDS_SCCLOSE         "Schlie�t das aktive Fenster und fordert zur Dokumentspeicherung auf."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_SCRESTORE       "Stellt das Fenster in seiner normalen Gr��e wieder her."
     AFX_IDS_SCTASKLIST      "Aktiviert die Task-Liste."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_FILE_SAVEIMAGE       "Save a Still Image\nSave a Still Image"
     ID_FILE_WRITEAVI        "Record Video File\nRecord Video File"
@@ -329,7 +320,7 @@ BEGIN
     ID_SETTINGS_DEVICE      "Select Video Capture Device\nSelect Video Capture Device"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_BUTTONTRIGGERTOGGLE  "Toggle Trigger Mode\nToggle Trigger Mode"
 END
@@ -339,20 +330,18 @@ END
 
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.S.) resources
+// English (United States) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Menu
 //
 
-IDR_MAINFRAME MENU 
+IDR_MAINFRAME MENU
 BEGIN
     POPUP "&File"
     BEGIN
@@ -380,12 +369,12 @@ END
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDM_EXTERNAL_TRIGGER    "Toggles external trigger"
 END
 
-#endif    // English (U.S.) resources
+#endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

@@ -189,6 +189,10 @@
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="RecognizeBarcode.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="resource2.h" />
+    <ClInclude Include="resource3.h" />
+    <ClInclude Include="resource4.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
